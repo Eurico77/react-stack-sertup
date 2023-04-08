@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-// Componente funcional usa função
-// Componente de classe usa classe
+import App from './App';
 
-ReactDOM.render(<h1>Ola mundo!!</h1>, document.getElementById('root'));
+// Componente funcional usa função
+// Componente de classe usa classeå
+ReactDOM.render(<App />, document.getElementById('root'));
