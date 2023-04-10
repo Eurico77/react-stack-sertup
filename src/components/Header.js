@@ -9,6 +9,7 @@ export function Header({ title, children }) {
         <h1>{title}</h1>
         {children}
       </header>
+      <hr />
       <br />
     </>
   );
@@ -16,7 +17,7 @@ export function Header({ title, children }) {
 
 Header.propTypes = {
   title: propTypes.string.isRequired,
-  children: propTypes.node.isRequired,
+  children: propTypes.node,
 };
 
 Header.defaultProps = {
