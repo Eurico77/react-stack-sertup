@@ -1,6 +1,9 @@
-import React, { useState } from 'react';
+import React, { createContext, useState } from 'react';
+
 import { Post } from './components/Post';
 import { Header } from './components/Header';
+
+export const ThemeContext = createContext('dark');
 
 // Render -> mostrar o componente em tela
 export default function App() {
@@ -27,6 +30,8 @@ export default function App() {
       read: false,
     },
   ]);
+  const [theme, setTheme] = useState('dark');
+
   // sempre que o estado for alterado, o componente sera renderizado novamente
   // sempre que depender do valor anterior do estado, usar a funcao de callback do useState
   function handleRefresh() {
@@ -45,8 +50,12 @@ export default function App() {
     setPosts((prevState) => prevState.filter((post) => post.id !== id));
   }
 
+  function handleToggleTheme() {
+    setTheme((prevState) => (prevState === 'dark' ? 'light' : 'dark'));
+  }
+
   return (
-    <>
+    <ThemeContext.Provider value={theme}>
       <Header>
         <div>
           Posts da semana
@@ -68,6 +77,6 @@ export default function App() {
           // poderia usar o spread operator para passar todos os valores de post de forma mais simples e dinâmica {...post}
         />
       ))}
-    </>
+    </ThemeContext.Provider>
   );
 }
