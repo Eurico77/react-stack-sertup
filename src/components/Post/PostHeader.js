@@ -1,7 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-
-import { Button } from './Button';
+import { Button } from '../Button';
 
 export function PostHeader({ id, title, read, onRemove }) {
   return (

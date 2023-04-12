@@ -1,7 +1,7 @@
 import React from 'react';
-import { PostHeader } from './PostHeader';
 import propTypes from 'prop-types';
 
+import { PostHeader } from './PostHeader';
 // as props so aceitam leitura, nao pode ser alterado pelo componente filho
 // title = algum valor
 export function Post({ id, title, subtitle, likes, read, onRemove }) {

@@ -1,8 +1,8 @@
 import React, { createContext, useState } from 'react';
 
-import { Post } from './components/Post';
-import { Header } from './components/Header';
-import { ThemeProvider } from './components/contexts/ThemeContext';
+import { ThemeProvider } from '../../contexts/ThemeContext';
+import { Header } from '../Header';
+import { Post } from '../Post';
 
 // Render -> mostrar o componente em tela
 export default function App() {

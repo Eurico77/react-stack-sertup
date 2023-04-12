@@ -1,11 +1,8 @@
 import React, { useContext } from 'react';
 import propTypes from 'prop-types';
 
-import styles from './Header.css';
-
-import { Button } from './Button';
-import { ThemeContext } from '../components/contexts/ThemeContext';
-
+import { ThemeContext } from '../../contexts/ThemeContext';
+import { Button } from '../Button';
 // as props so aceitam leitura, nao pode ser alterado diretamente
 export function Header({ title, children }) {
   const { onToggleTheme } = useContext(ThemeContext);
@@ -22,11 +19,9 @@ export function Header({ title, children }) {
     //   justifyContent: 'space-between',
     // }}
     >
-      <header className={styles.header}>
-        <h1 className={styles.title}>{title}</h1>
-        <Button className={styles.button} onClick={onToggleTheme}>
-          Mudar tema
-        </Button>
+      <header>
+        <h1>{title}</h1>
+        <Button onClick={onToggleTheme}> Mudar tema</Button>
         {children}
       </header>
       <br />
