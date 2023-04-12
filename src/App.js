@@ -55,8 +55,6 @@ export default function App() {
           Posts da semana
           <button onClick={handleRefresh}>Atualizar</button>
         </div>
-
-        <strong>Sou um children</strong>
         {/* tudo que passar aqui sera injetado dentro da propiedade children */}
       </Header>
       {posts.map((post) => (

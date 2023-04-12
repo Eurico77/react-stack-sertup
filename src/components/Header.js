@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import propTypes from 'prop-types';
 
+import styles from './Header.css';
+
 import { Button } from './Button';
 import { ThemeContext } from '../components/contexts/ThemeContext';
 
@@ -9,15 +11,27 @@ export function Header({ title, children }) {
   const { onToggleTheme } = useContext(ThemeContext);
 
   return (
-    <>
-      <header>
-        <h1>{title}</h1>
-        <Button onClick={onToggleTheme}>Mudar tema</Button>
+    <div
+    // estilosInline
+    // style={{
+    //   fontFamily: 'sans-serif',
+    //   backgroundColor: '#7159c1',
+    //   color: '#fff',
+    //   padding: '10px',
+    //   display: 'flex',
+    //   justifyContent: 'space-between',
+    // }}
+    >
+      <header className={styles.header}>
+        <h1 className={styles.title}>{title}</h1>
+        <Button className={styles.button} onClick={onToggleTheme}>
+          Mudar tema
+        </Button>
         {children}
       </header>
-      <hr />
       <br />
-    </>
+      <hr />
+    </div>
   );
 }
 
