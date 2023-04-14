@@ -3,6 +3,7 @@ import propTypes from 'prop-types';
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { Button } from '../Button';
+import Title from '../Title';
 // as props so aceitam leitura, nao pode ser alterado diretamente
 export function Header({ title, children }) {
   const { onToggleTheme } = useContext(ThemeContext);
@@ -20,7 +21,7 @@ export function Header({ title, children }) {
     // }}
     >
       <header>
-        <h1>{title}</h1>
+        <Title>{title}</Title>
         <Button onClick={onToggleTheme}> Mudar tema</Button>
         {children}
       </header>

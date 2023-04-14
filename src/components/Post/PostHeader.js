@@ -14,6 +14,6 @@ export function PostHeader({ id, title, read, onRemove }) {
 PostHeader.propTypes = {
   id: propTypes.number.isRequired,
   title: propTypes.string.isRequired,
-  read: propTypes.bool.isRequired,
+  read: propTypes.bool,
   onRemove: propTypes.func.isRequired,
 };
