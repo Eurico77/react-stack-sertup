@@ -7,3 +7,4 @@ export default createGlobalStyle`
     font-family: sans-serif;
   }
 `;
+1;
