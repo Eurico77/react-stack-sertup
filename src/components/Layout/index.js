@@ -8,7 +8,7 @@ export default function Layout({ onToggleTheme, selectedTheme }) {
     <>
       <Header onToggleTheme={onToggleTheme} selectedTheme={selectedTheme} />
       <PostsList />
-      <Footer onToggleTheme={onToggleTheme} />
+      <Footer onToggleTheme={onToggleTheme} selectedTheme={selectedTheme} />
     </>
   );
 }
