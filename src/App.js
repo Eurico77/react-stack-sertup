@@ -15,9 +15,9 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem('theme', theme);
-    fetch('https://api.github.com/users/eurico77').then((response) =>
-      response.json().then((data) => console.log(data))
-    );
+    // fetch('https://api.github.com/users/eurico77').then((response) =>
+    //   response.json().then((data) => console.log(data))
+    // );
   }, [theme]);
 
   function handleToggleTheme() {
