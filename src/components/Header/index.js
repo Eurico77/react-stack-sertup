@@ -1,7 +1,7 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 import { Container } from './styles';
-import { useHistory } from 'react-router-dom';
 
 export default function Header({ onToggleTheme, selectedTheme }) {
   const history = useHistory();
