@@ -3,14 +3,12 @@ import { useParams, useLocation } from 'react-router-dom';
 
 export function Post() {
   const params = useParams();
-  const queryParams = useLocation();
+  const { search } = useLocation();
 
-  const query = useMemo(
-    () => new URLSearchParams(queryParams.search),
-    [params]
-  );
+  const queryParams = useMemo(() => new URLSearchParams(search), [search]);
 
-  console.log(query.get('search'));
+  console.log(queryParams.get('key'));
   console.log(params);
+
   return <h1>Post</h1>;
 }
